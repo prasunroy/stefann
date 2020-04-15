@@ -1,0 +1,17 @@
+name: stefann-gpu
+channels:
+  - defaults
+dependencies:
+  - colorama
+  - keras
+  - numpy
+  - pillow
+  - pip
+  - python
+  - requests
+  - tensorflow-gpu=2.1.0
+  - pip:
+      - opencv-python==4.2.0.*
+      - pyqt5
+prefix: ./env/stefann-gpu
+
