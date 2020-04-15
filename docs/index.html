@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Prasun Roy">
+  <meta name="description" content="STEFANN: Scene Text Editor using Font Adaptive Neural Network">
+  <meta name="keywords" content="STEFANN, FANnet, Colornet, Scene Text Editor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEFANN: Scene Text Editor using Font Adaptive Neural Network</title>
+  <link rel="icon" type="image/x-icon" href="static/imgs/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <style type="text/css">
+    html,
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+    a:hover,
+    a:active {
+      color: #ff6464;
+      text-decoration: none;
+    }
+    .stefann-header-1 {
+      padding: 1.0rem 0.0rem 1.0rem 0.0rem;
+    }
+    .stefann-header-2 {
+      padding: 2.5rem 0.0rem 0.5rem 0.0rem;
+    }
+    .stefann-link {
+      color: #4a4a4a;
+    }
+    .stefann-link-grid-icon {
+      margin: 2.0rem 0.0rem 0.0rem 0.0rem;
+    }
+    .stefann-link-grid-text {
+      padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container box">
+    <div class="columns is-mobile">
+      <div class="column is-full has-text-centered">
+        <div class="has-background-light stefann-header-1">
+          <h1 class="title is-size-7-mobile is-size-5-tablet is-size-4-desktop is-size-3-widescreen">
+            STEFANN: Scene Text Editor using Font Adaptive Neural Network
+          </h1>
+          <p class="is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+            <a href="https://scholar.google.com/citations?user=n6T5cSsAAAAJ&hl=en" target="_blank">Prasun Roy</a> <sup>1*</sup> &nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=8pffuA4AAAAJ&hl=en" target="_blank">Saumik Bhattacharya</a> <sup>2*</sup> &nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=vTSn-xkAAAAJ&hl=en" target="_blank">Subhankar Ghosh</a> <sup>1*</sup> &nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=2_z_CogAAAAJ&hl=en" target="_blank">Umapada Pal</a> <sup>1</sup>
+            <br>
+            <sup>1</sup> <a class="stefann-link" href="https://www.isical.ac.in/" target="_blank">Indian Statistical Institute, Kolkata</a>
+            <br>
+            <sup>2</sup> <a class="stefann-link" href="http://www.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur</a>
+            <br>
+            <a class="stefann-link" href="http://cvpr2020.thecvf.com/" target="_blank">The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2020</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full has-text-centered">
+        <figure class="image">
+          <img src="static/imgs/teaser.jpg">
+        </figure>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full">
+        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+          <b>Abstract</b>
+        </h1>
+        <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop has-text-justified">
+          Textual information in a captured scene plays an important role in scene interpretation and decision making. Though there exist methods that can successfully detect and interpret complex text regions present in a scene, to the best of our knowledge, there is no significant prior work that aims to modify the textual information in an image. The ability to edit text directly on images has several advantages including error correction, text restoration and image reusability. In this paper, we propose a method to modify text in an image at character-level. We approach the problem in two stages. At first, the unobserved character (target) is generated from an observed character (source) being modified. We propose two different neural network architectures - (a) <b>FANnet</b> to achieve structural consistency with source font and (b) <b>Colornet</b> to preserve source color. Next, we replace the source character with the generated character maintaining both geometric and visual consistency with neighboring characters. Our method works as a unified platform for modifying text in images. We present the effectiveness of our method on COCO-Text and ICDAR datasets both qualitatively and quantitatively.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full">
+        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+          <b>Network Architecture</b>
+        </h1>
+        <div class="has-text-centered">
+          <figure class="image">
+            <a href="static/imgs/network_architecture.svg" target="_blank">
+              <img src="static/imgs/network_architecture_overview.svg">
+            </a>
+          </figure>
+          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop has-text-danger">
+            <br>
+            <b>Click on the image for a detailed view of the network architecture.</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full">
+        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+          <b>Editing Results</b>
+        </h1>
+        <div class="has-text-centered">
+          <figure class="image">
+            <img src="static/imgs/results.jpg">
+          </figure>
+          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop">
+            <br>
+            <b>Each image pair consists of the original image <span class="has-text-danger">(Left)</span> and the edited image <span class="has-text-danger">(Right)</span>.</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full">
+        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+          <b>Paper and Supplementary Materials</b>
+        </h1>
+        <div class="has-text-centered">
+          <img src="static/imgs/thumbnail-08915.jpg">
+          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+            <a href="static/docs/08915.pdf" target="_blank">
+              Download Paper ~8MB PDF
+            </a>
+          </p>
+          <img src="static/imgs/thumbnail-08915-supp.jpg">
+          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+            <a href="static/docs/08915-supp.pdf" target="_blank">
+              Download Supplementary Materials ~6MB PDF
+            </a>
+          </p>
+          <div class="columns is-multiline is-mobile stefann-link-grid-icon">
+            <div class="column is-one-quarter has-text-centered has-text-danger">
+              <i class="far fa-file-pdf fa-5x"></i>
+            </div>
+            <div class="column is-one-quarter has-text-centered has-text-dark">
+              <i class="fab fa-github fa-5x"></i>
+            </div>
+            <div class="column is-one-quarter has-text-centered has-text-success">
+              <i class="fab fa-google-drive fa-5x"></i>
+            </div>
+            <div class="column is-one-quarter has-text-centered has-text-info">
+              <i class="fab fa-kaggle fa-5x"></i>
+            </div>
+            <div class="column is-one-quarter has-text-centered stefann-link-grid-text">
+              <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+                <!-- <a href="#" target="_blank"> -->
+                  Publication<br>@ CVF Open Access
+                <!-- </a> -->
+              </p>
+            </div>
+            <div class="column is-one-quarter has-text-centered stefann-link-grid-text">
+              <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+                <a href="https://github.com/prasunroy/stefann" target="_blank">
+                  Code<br>@ GitHub
+                </a>
+              </p>
+            </div>
+            <div class="column is-one-quarter has-text-centered stefann-link-grid-text">
+              <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+                <a href="https://drive.google.com/open?id=1sEDiX_jORh2X-HSzUnjIyZr-G9LJIw1k" target="_blank">
+                  Datasets + Models<br>@ Google Drive
+                </a>
+              </p>
+            </div>
+            <div class="column is-one-quarter has-text-centered stefann-link-grid-text">
+              <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
+                <!-- <a href="#" target="_blank"> -->
+                  Datasets + Kernels<br>@ Kaggle
+                <!-- </a> -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full">
+        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+          <b>Citation</b>
+        </h1>
+<pre class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop has-text-left">
+@InProceedings{Roy_2020_CVPR,
+  title     = {STEFANN: Scene Text Editor using Font Adaptive Neural Network},
+  author    = {Roy, Prasun and Bhattacharya, Saumik and Ghosh, Subhankar and Pal, Umapada},
+  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2020}
+}
+</pre>
+      </div>
+    </div>
+    <div class="columns is-mobile">
+      <div class="column is-full has-text-centered">
+        <p class="is-size-7">
+          <br>
+          Copyright <span><i class="fas fa-copyright"></i></span> 2020 by the authors |
+          Made with <span class="has-text-danger"><i class="fas fa-heart animated jello infinite"></i></span> on Earth.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
