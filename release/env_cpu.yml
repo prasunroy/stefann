@@ -9,9 +9,9 @@ dependencies:
   - pip
   - python
   - requests
-  - tensorflow=2.1.0
   - pip:
       - opencv-python==4.2.0.*
       - pyqt5
+      - tensorflow=2.1.0
 prefix: ./env/stefann-cpu
 
