@@ -1,0 +1,17 @@
+name: stefann-osx
+channels:
+  - defaults
+dependencies:
+  - colorama
+  - keras
+  - numpy
+  - pillow
+  - pip
+  - python
+  - requests
+  - pip:
+      - opencv-python==4.1.0.*
+      - opencv-contrib-python-headless
+      - pyqt5
+      - tensorflow==2.1.0
+prefix: ./env/stefann-osx
