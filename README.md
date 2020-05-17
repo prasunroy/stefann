@@ -55,9 +55,13 @@ git clone https://github.com/prasunroy/stefann.git
 cd stefann
 ```
 #### Step 4: Create an environment and install depenpencies
-To create **CPU** environment: `conda env create -f release/env_cpu.yml`
-<br>
-To create **GPU** environment: `conda env create -f release/env_gpu.yml`
+
+#### On Linux and Windows
+* To create **CPU** environment: `conda env create -f release/env_cpu.yml`
+* To create **GPU** environment: `conda env create -f release/env_gpu.yml`
+
+#### On macOS
+* To create **CPU** environment: `conda env create -f release/env_osx.yml`
 
 ### :boom: Quick test
 #### Step 1: [Download](https://drive.google.com/open?id=16-mq3MOR1zmOsxNgegRmGDeVRyeyQ0_H) models and pretrained checkpoints into `release/models` directory
@@ -186,4 +190,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
 ##### Made with :heart: and :pizza: on Earth.
