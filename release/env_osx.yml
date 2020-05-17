@@ -1,4 +1,4 @@
-name: stefann-osx
+name: stefann-cpu
 channels:
   - defaults
 dependencies:
@@ -10,8 +10,8 @@ dependencies:
   - python
   - requests
   - pip:
+      - tensorflow==2.1.0
       - opencv-python==4.1.0.*
       - opencv-contrib-python-headless
       - pyqt5
-      - tensorflow==2.1.0
-prefix: ./env/stefann-osx
+prefix: ./env/stefann-cpu

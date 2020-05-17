@@ -14,3 +14,4 @@ dependencies:
       - opencv-python==4.2.0.*
       - pyqt5
 prefix: ./env/stefann-cpu
+
