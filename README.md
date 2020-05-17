@@ -153,7 +153,7 @@ To start training: `python colornet.py`
 <h3 align="center">
   <a href="https://prasunroy.github.io/stefann">Project</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
   <a href="https://prasunroy.github.io/stefann/static/docs/08915.pdf">Paper</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-  <a href="https://prasunroy.github.io/stefann/static/docs/08915-supp.pdf">Supplementary</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+  <a href="https://prasunroy.github.io/stefann/static/docs/08915-supp.pdf">Supplementary Materials</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
   <a href="https://drive.google.com/open?id=1dOl4_yk2x-LTHwgKBykxHQpmqDvqlkab">Datasets</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
   <a href="https://drive.google.com/open?id=16-mq3MOR1zmOsxNgegRmGDeVRyeyQ0_H">Models</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
   <a href="https://drive.google.com/uc?export=download&id=1Gzb-VYeQJNXwDnkoEI4iAskOGYmWR6Rk">Sample Images</a>
