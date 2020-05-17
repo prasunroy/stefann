@@ -133,4 +133,5 @@ dmypy.json
 [Oo]utput/
 [Rr]elease/[Mm]odels/
 [Rr]elease/[Ss]ample_[Ii]mages/
-release/.DS_Store
+[Rr]elease/.DS_Store
+
