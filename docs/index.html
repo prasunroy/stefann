@@ -6,17 +6,16 @@
   <meta name="author" content="Prasun Roy">
   <meta name="description" content="STEFANN: Scene Text Editor using Font Adaptive Neural Network">
   <meta name="keywords" content="STEFANN, FANnet, Colornet, Scene Text Editor">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STEFANN: Scene Text Editor using Font Adaptive Neural Network</title>
   <link rel="icon" type="image/x-icon" href="static/imgs/favicon.ico">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto&display=swap">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <style type="text/css">
     html,
     body {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
     a:hover,
     a:active {
@@ -27,7 +26,10 @@
       padding: 1.0rem 0.0rem 1.0rem 0.0rem;
     }
     .stefann-header-2 {
-      padding: 2.5rem 0.0rem 0.5rem 0.0rem;
+      padding: 3.0rem 0.0rem 0.5rem 0.0rem;
+    }
+    .stefann-header-title {
+      font-family: 'Bree Serif', sans-serif;
     }
     .stefann-link {
       color: #4a4a4a;
@@ -38,52 +40,97 @@
     .stefann-link-grid-text {
       padding: 0.0rem 0.0rem 0.0rem 0.0rem;
     }
+    .stefann-media-container {
+      padding: 0px 10px 0px 10px;
+      height: 495px;
+      overflow: auto;
+    }
+    .stefann-news-container {
+      padding: 1.5rem 1.0rem 1.5rem 1.0rem;
+    }
+    .stefann-scroll-area {
+      scrollbar-width: 5px;
+      scrollbar-color: #808080 #e1e1e1;
+    }
+    .stefann-scroll-area::-webkit-scrollbar {
+      width: 5px;
+    }
+    .stefann-scroll-area::-webkit-scrollbar-thumb {
+      background-color: #808080;
+    }
+    .stefann-scroll-area::-webkit-scrollbar-track {
+      background-color: #e1e1e1;
+    }
+    .stefann-shadow {
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+    .stefann-text {
+      color: #ff0080;
+    }
+    .stefann-tweet {
+      color: #00acee;
+    }
+    .stefann-video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      max-width: 100%;
+      height: 0;
+      overflow: hidden;
+    }
+    .stefann-video-container embed, .stefann-video-container iframe, .stefann-video-container object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 
 <body>
-  <div class="container box">
-    <div class="columns is-mobile">
+  <div class="container box is-shadowless">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full has-text-centered">
-        <div class="has-background-light stefann-header-1">
-          <h1 class="title is-size-7-mobile is-size-5-tablet is-size-4-desktop is-size-3-widescreen">
-            STEFANN: Scene Text Editor using Font Adaptive Neural Network
+        <div class="stefann-header-1">
+          <h1 class="title is-size-5-mobile is-size-4-tablet is-size-3-desktop is-size-2-widescreen stefann-header-title">
+            <span class="stefann-text">STEFANN</span>: Scene Text Editor using Font Adaptive Neural Network
           </h1>
-          <p class="is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-5-widescreen">
-            <a href="https://scholar.google.com/citations?user=n6T5cSsAAAAJ&hl=en" target="_blank">Prasun Roy</a> <sup>1*</sup> &nbsp;&nbsp;&nbsp;
-            <a href="https://scholar.google.com/citations?user=8pffuA4AAAAJ&hl=en" target="_blank">Saumik Bhattacharya</a> <sup>2*</sup> &nbsp;&nbsp;&nbsp;
-            <a href="https://scholar.google.com/citations?user=vTSn-xkAAAAJ&hl=en" target="_blank">Subhankar Ghosh</a> <sup>1*</sup> &nbsp;&nbsp;&nbsp;
+          <p class="is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-6-widescreen">
+            <a href="https://scholar.google.com/citations?user=n6T5cSsAAAAJ&hl=en" target="_blank">Prasun Roy</a> <sup>1*</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=8pffuA4AAAAJ&hl=en" target="_blank">Saumik Bhattacharya</a> <sup>2*</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=vTSn-xkAAAAJ&hl=en" target="_blank">Subhankar Ghosh</a> <sup>1*</sup> &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://scholar.google.com/citations?user=2_z_CogAAAAJ&hl=en" target="_blank">Umapada Pal</a> <sup>1</sup>
             <br>
             <sup>1</sup> <a class="stefann-link" href="https://www.isical.ac.in/" target="_blank">Indian Statistical Institute, Kolkata</a>
             <br>
             <sup>2</sup> <a class="stefann-link" href="http://www.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur</a>
             <br>
-            <a class="stefann-link" href="http://cvpr2020.thecvf.com/" target="_blank">The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2020</a>
+            <br>
+            <a class="stefann-link" href="http://cvpr2020.thecvf.com/" target="_blank"><b><i>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2020</i></b></a>
           </p>
         </div>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full has-text-centered">
-        <figure class="image">
+        <figure class="image stefann-shadow">
           <img src="static/imgs/teaser.jpg">
         </figure>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full">
-        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
           <b>Abstract</b>
         </h1>
-        <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop has-text-justified">
+        <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-widescreen has-text-justified">
           Textual information in a captured scene plays an important role in scene interpretation and decision making. Though there exist methods that can successfully detect and interpret complex text regions present in a scene, to the best of our knowledge, there is no significant prior work that aims to modify the textual information in an image. The ability to edit text directly on images has several advantages including error correction, text restoration and image reusability. In this paper, we propose a method to modify text in an image at character-level. We approach the problem in two stages. At first, the unobserved character (target) is generated from an observed character (source) being modified. We propose two different neural network architectures - (a) <b>FANnet</b> to achieve structural consistency with source font and (b) <b>Colornet</b> to preserve source color. Next, we replace the source character with the generated character maintaining both geometric and visual consistency with neighboring characters. Our method works as a unified platform for modifying text in images. We present the effectiveness of our method on COCO-Text and ICDAR datasets both qualitatively and quantitatively.
         </p>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full">
-        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
           <b>Network Architecture</b>
         </h1>
         <div class="has-text-centered">
@@ -92,32 +139,32 @@
               <img src="static/imgs/network_architecture_overview.svg">
             </a>
           </figure>
-          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop has-text-danger">
+          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-6-widescreen has-text-danger">
             <br>
             <b>Click on the image for a detailed view of the network architecture.</b>
           </p>
         </div>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full">
-        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
           <b>Editing Results</b>
         </h1>
         <div class="has-text-centered">
-          <figure class="image">
+          <figure class="image stefann-shadow">
             <img src="static/imgs/results.jpg">
           </figure>
-          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop">
+          <p class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-6-widescreen">
             <br>
             <b>Each image pair consists of the original image <span class="has-text-danger">(Left)</span> and the edited image <span class="has-text-danger">(Right)</span>.</b>
           </p>
         </div>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full">
-        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
           <b>Paper and Supplementary Materials</b>
         </h1>
         <div class="has-text-centered">
@@ -133,7 +180,7 @@
               Download Supplementary Materials ~6MB PDF
             </a>
           </p>
-          <div class="columns is-multiline is-mobile stefann-link-grid-icon">
+          <div class="columns is-multiline is-centered is-mobile stefann-link-grid-icon">
             <div class="column is-one-quarter has-text-centered has-text-danger">
               <i class="far fa-file-pdf fa-5x"></i>
             </div>
@@ -178,12 +225,12 @@
         </div>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered is-mobile">
       <div class="column is-full">
-        <h1 class="is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-left stefann-header-2">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
           <b>Citation</b>
         </h1>
-<pre class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop has-text-left">
+<pre class="subtitle is-size-7-mobile is-size-7-tablet is-size-6-desktop is-size-6-widescreen has-text-left">
 @InProceedings{Roy_2020_CVPR,
   title     = {STEFANN: Scene Text Editor using Font Adaptive Neural Network},
   author    = {Roy, Prasun and Bhattacharya, Saumik and Ghosh, Subhankar and Pal, Umapada},
@@ -194,16 +241,115 @@
 </pre>
       </div>
     </div>
-    <div class="columns is-mobile">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
+          <b>Video Presentations</b>
+        </h1>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-half">
+            <div class="stefann-video-container stefann-shadow">
+              <iframe src="https://www.youtube.com/embed/HBOt9Hb__AY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="stefann-video-container stefann-shadow">
+              <iframe src="https://www.youtube.com/embed/HTVQXHPIKKo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-half-tablet is-two-thirds-desktop">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
+          <b>News and Updates</b>
+        </h1>
+        <div class="stefann-media-container stefann-scroll-area stefann-shadow">
+          <div class="stefann-news-container">
+            <h1 class="title is-size-5 has-text-left has-text-grey stefann-header-title">
+              <span class="icon has-text-primary"><i class="far fa-calendar-alt"></i></span>&nbsp;&nbsp;May 20, 2020
+            </h1>
+            <p class="subtitle is-size-6">
+              CVPR 2020 main conference presentation <a href="http://cvpr2020.thecvf.com/program/main-conference" target="_blank">schedule</a> is released. We will be presenting our work at Session 3.3
+              <br>
+              on Thursday, June 18, 2020, 3:00-5:00 PM Pacific Daylight Time (Poster #105).
+            </p>
+          </div>
+          <div class="stefann-news-container">
+            <h1 class="title is-size-5 has-text-left has-text-grey stefann-header-title">
+              <span class="icon has-text-primary"><i class="far fa-calendar-alt"></i></span>&nbsp;&nbsp;Apr 21, 2020
+            </h1>
+            <p class="subtitle is-size-6">
+              Our work is featured in this week's edition of the <a href="https://medium.com/deeptrace/tracer-newsletter-50-20-04-20-extinction-rebellion-release-deepfake-of-belgian-prime-minister-2b48d586b44" target="_blank">Tracer Newsletter</a> published by <a href="https://twitter.com/Deeptracelabs" target="_blank">@Deeptracelabs</a>.
+            </p>
+          </div>
+          <div class="stefann-news-container">
+            <h1 class="title is-size-5 has-text-left has-text-grey stefann-header-title">
+              <span class="icon has-text-primary"><i class="far fa-calendar-alt"></i></span>&nbsp;&nbsp;Apr 16, 2020
+            </h1>
+            <p class="subtitle is-size-6">
+              Our work is featured as the trending <a href="https://twitter.com/madewithml/status/1250787215833063426" target="_blank">post</a> of the day on <a href="https://madewithml.com/projects/508/stefann-scene-text-editor-using-font-adaptive-neural-network/" target="_blank">Made With ML</a>.<span class="icon has-text-warning"><i class="fas fa-trophy"></i></span>
+              <br>
+              <a href="https://twitter.com/GokuMohandas" target="_blank">@GokuMohandas</a> of <a href="https://twitter.com/madewithml" target="_blank">@madewithml</a> tweeted an insightful <a href="https://twitter.com/GokuMohandas/status/1250790238881894401" target="_blank">concern</a> regarding potential misuse of generative models and the need of robust detection techniques to distinguish between real and fake images.
+            </p>
+          </div>
+          <div class="stefann-news-container">
+            <h1 class="title is-size-5 has-text-left has-text-grey stefann-header-title">
+              <span class="icon has-text-primary"><i class="far fa-calendar-alt"></i></span>&nbsp;&nbsp;Apr 15, 2020
+            </h1>
+            <p class="subtitle is-size-6">
+              We have released our paper, supplementary materials, code, datasets and pretrained models.<a href="https://twitter.com/_prasunroy/status/1261370328950792192" target="_blank"><span class="icon stefann-tweet"><i class="fab fa-twitter"></i></span></a>
+              <br>
+              <a class="github-button" href="https://github.com/prasunroy/stefann" data-icon="octicon-star" data-show-count="true" aria-label="Star prasunroy/stefann on GitHub">Star</a>
+              <a class="github-button" href="https://github.com/prasunroy/stefann/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork prasunroy/stefann on GitHub">Fork</a>
+            </p>
+          </div>
+          <div class="stefann-news-container">
+            <h1 class="title is-size-5 has-text-left has-text-grey stefann-header-title">
+              <span class="icon has-text-primary"><i class="far fa-calendar-alt"></i></span>&nbsp;&nbsp;Feb 24, 2020
+            </h1>
+            <p class="subtitle is-size-6">
+              Our paper is accepted in <a href="http://cvpr2020.thecvf.com/" target="_blank">CVPR 2020</a>.<span class="icon has-text-danger"><i class="fas fa-heart"></i></span>
+              <br>
+              More details about the code and datasets will be released soon.<a href="http://twitter.com/_prasunroy/status/1231996776044875776" target="_blank"><span class="icon stefann-tweet"><i class="fab fa-twitter"></i></span></a>
+            </p>
+          </div>
+          <div class="stefann-news-container">
+            <h1 class="title is-size-5 has-text-left has-text-grey stefann-header-title">
+              <span class="icon has-text-primary"><i class="far fa-calendar-alt"></i></span>&nbsp;&nbsp;Sep 03, 2019
+            </h1>
+            <p class="subtitle is-size-6">
+              We have been granted a software copyright on <b>STEFANN: Scene Text Editor using Font Adaptive Neural Network</b> by the <a href="http://copyright.gov.in/" target="_blank">Copyright Office</a>, Government of India with ROC No. <b>SW-12778/2019</b> and Diary No. <b>9737/2019-CO/SW</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-half-tablet is-one-third-desktop">
+        <h1 class="is-size-5-mobile is-size-5-tablet is-size-4-desktop is-size-4-widescreen has-text-left stefann-header-2 stefann-header-title">
+          <b>On Twitter</b>
+        </h1>
+        <div class="stefann-media-container stefann-scroll-area stefann-shadow">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">STEFANN: Scene Text Editor using Font Adaptive Neural Network<br>pdf: <a href="https://t.co/WIkFfsL0i2">https://t.co/WIkFfsL0i2</a><br>abs: <a href="https://t.co/sHIYHm8PMb">https://t.co/sHIYHm8PMb</a><br>project page: <a href="https://t.co/cCCOKSKDrc">https://t.co/cCCOKSKDrc</a><br>github: <a href="https://t.co/dkOYTNOjgE">https://t.co/dkOYTNOjgE</a> <a href="https://t.co/A65TXpfC0C">pic.twitter.com/A65TXpfC0C</a></p>&mdash; roadrunner01 (@ak92501) <a href="https://twitter.com/ak92501/status/1250457893083758592?ref_src=twsrc%5Etfw">April 15, 2020</a></blockquote>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🏆 Trending post of the day on Made With ML: STEFANN - Scene Text Editor using Font Adaptive Neural Network<a href="https://t.co/ki6DEBQE6n">https://t.co/ki6DEBQE6n</a></p>&mdash; Made With ML (@madewithml) <a href="https://twitter.com/madewithml/status/1250787215833063426?ref_src=twsrc%5Etfw">April 16, 2020</a></blockquote>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think amazing work like should also come with methods of detection that the technique was used on a given image, etc. This year&#39;s CVPR results are of such high quality that they can easily be abused. Not saying the burden falls immediately on the group but a follow up, etc. <a href="https://t.co/QvaR7mTQlj">https://t.co/QvaR7mTQlj</a></p>&mdash; Goku Mohandas (@GokuMohandas) <a href="https://twitter.com/GokuMohandas/status/1250790238881894401?ref_src=twsrc%5Etfw">April 16, 2020</a></blockquote>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Nice application to play with:<br>STEFANN: Scene Text Editor using Font Adaptive Neural Network @ The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2020. <a href="https://twitter.com/hashtag/DeepLearning?src=hash&amp;ref_src=twsrc%5Etfw">#DeepLearning</a> <a href="https://t.co/uzxUZTHjMZ">https://t.co/uzxUZTHjMZ</a></p>&mdash; Michał Chromiak (@drChromiak) <a href="https://twitter.com/drChromiak/status/1251071432190316545?ref_src=twsrc%5Etfw">April 17, 2020</a></blockquote>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">STEFANN: Scene Text Editor using Font Adaptive Neural Network <a href="https://t.co/sMQMynJx1v">https://t.co/sMQMynJx1v</a> <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> <a href="https://twitter.com/hashtag/Research?src=hash&amp;ref_src=twsrc%5Etfw">#Research</a> via <a href="https://twitter.com/Smerity?ref_src=twsrc%5Etfw">@Smerity</a></p>&mdash; Future of AI (@future_of_AI) <a href="https://twitter.com/future_of_AI/status/1251132809076453377?ref_src=twsrc%5Etfw">April 17, 2020</a></blockquote>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The top feature from this week&#39;s Tracer Newsletter<br><br>Extinction Rebellion (XR) activists released a deepfake video of the Belgian Prime Minister Shophie Wilmès making a speech linking Covid-19 to the climate crisis.<a href="https://t.co/AFn18l3UmM">https://t.co/AFn18l3UmM</a></p>&mdash; Deeptrace (@Deeptracelabs) <a href="https://twitter.com/Deeptracelabs/status/1252313591040167940?ref_src=twsrc%5Etfw">April 20, 2020</a></blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered is-mobile">
       <div class="column is-full has-text-centered">
-        <p class="is-size-7">
-          <br>
+        <p class="is-size-7 stefann-header-2">
           Copyright <span><i class="fas fa-copyright"></i></span> 2020 by the authors |
           Made with <span class="has-text-danger"><i class="fas fa-heart animated jello infinite"></i></span> on Earth.
         </p>
       </div>
     </div>
   </div>
+  <script async defer src="https://buttons.github.io/buttons.js" charset="utf-8"></script>
+  <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 
 </html>
