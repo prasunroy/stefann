@@ -166,7 +166,7 @@ To start training: `python colornet.py`
 @InProceedings{Roy_2020_CVPR,
   title     = {STEFANN: Scene Text Editor using Font Adaptive Neural Network},
   author    = {Roy, Prasun and Bhattacharya, Saumik and Ghosh, Subhankar and Pal, Umapada},
-  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   month     = {June},
   year      = {2020}
 }
