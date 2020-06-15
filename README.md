@@ -142,10 +142,12 @@ cd stefann
 To configure training options edit `configurations` section `(line 40-72)` of `fannet.py`
 <br>
 To start training: `python fannet.py`
+###### :cloud: Check [this notebook](https://www.kaggle.com/prasunroy/starter-1-font-generation-stefann-cvpr-2020) hosted at Kaggle for an interactive demonstration of FANnet.
 #### Step 4: Configure and train Colornet
 To configure training options edit `configurations` section `(line 38-65)` of `colornet.py`
 <br>
 To start training: `python colornet.py`
+###### :cloud: Check [this notebook](https://www.kaggle.com/prasunroy/starter-2-color-transfer-stefann-cvpr-2020) hosted at Kaggle for an interactive demonstration of Colornet.
 
 <br>
 
@@ -190,5 +192,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+
+
 
 ##### Made with :heart: and :pizza: on Earth.
